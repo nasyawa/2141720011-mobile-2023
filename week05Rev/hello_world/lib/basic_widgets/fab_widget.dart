@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 class MyFabWidget extends StatelessWidget{
-  const MyFabWidget({super.key});
+  const MyFabWidget({ super.key});
 
   @override
   Widget build(BuildContext context){
@@ -11,9 +12,10 @@ class MyFabWidget extends StatelessWidget{
             // Add your onPressed code here!
           },
           child: const Icon(Icons.thumb_up),
-          backgroundColor: const Color.fromARGB(255, 196, 233, 30),
+          backgroundColor: const Color.fromARGB(255, 142, 233, 30),
         ),
       ),
     );
+
   }
 }
