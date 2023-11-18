@@ -89,6 +89,63 @@ dan di kode ini, dispose terhadap 'ScrollController
 
 6. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke spreadsheet yang telah disediakan!
 
+## Praktikum 2: Mengelola Data Layer dengan InheritedWidget dan InheritedNotifier
+
+InheritedWidget dapat digunakan sebagai pintu untuk komunikasi antara view dan data layers.
+
+**Langkah 1: Buat file plan_provider.dart**
+![Langkah 1 Prak 2](docs/2_Langkah1.jpg)
+
+**Langkah 2: Edit main.dart**
+![Langkah 2 Prak 2](docs/2_Langkah2.jpg)
+
+**Langkah 3: Tambah method pada model plan.dart**
+![Langkah 3 Praka 2](docs/2_Langkah3.jpg)
+
+**Langkah 4: Pindah ke PlanScreen**
+=> masuk ke Langkah 5
+
+**Langkah 5: Edit method _buildAddTaskButton**
+![Langkah 5 Prak 2](docs/2_Langkah5.jpg)
+
+**Langkah 6: Edit method _buildTaskTile**
+![Langkah 6 Prak 2](docs/2_Langkah6.jpg)
+
+**Langkah 7: Edit _buildList**
+![Langkah 7 Prak 2](docs/2_Langkah7.jpg)
+
+**Langkah 8: Tetap di class PlanScreen**
+membungkus (wrap) _buildList dengan widget Expanded dan memasukkan ke dalam widget Column pada Langkah 9
+
+**Langkah 9: Tambah widget SafeArea**
+![Langkah 9 Prak 2](docs/2_Langkah9.jpg)
+
+## **Tugas Praktikum 2: InheritedWidget**
+
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+
+2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
+
+=> InheritedWidget, memungkinkan data dpt diwariskan ke bawah pohon widget jadi maksudnya ketika inheritedwidget diubah nilainya, smua widget yg bergantung pd widget tsbut dan menggunakan buildcontext yg sama akan diberitau perubh tsbut
+
+=> InheritedNotifier, turunannya inheritedwidget yg menggunakan valuenotifier sbagai notif perubahan pdadata yg diwariskan.
+Penggunan InheritedNotif ini memungkinkan membuat PlanProvider yg bertnggungjawab dalam menyediakan akses kke valuenotif ke widget tree, memungkin widget dlm aplikasi merespon perubaahan pd objek plan dg mudah
+
+3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
+=> method completedCount merupakan getter yang mengembalikan jumlah tugas (tasks) yang telah selesai dalam rencana (Plan).
+=> method completenessMessage adalah getter yang mengembalikan pesan yang menggambarkan tingkat kelengkapan/keberhasilan dari rencana berdasarkan jumlah tugas yang telah selesai.
+
+Jadi keseluruhannya, penambahan cimpleteCount dan Complemessage membantu mnegelola menyediakan informasi kemajuan dari suatu plan
+
+4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+![Capture Hasil](docs/Prak2.gif)
+=> Hasil Terbaru, ada tambahan informasi progress nya, notif di bawah halaman 
+'.. out of .. task' yaitu dari method langkah 3
+
+namun jika di hp saat di run code saya saya kurang sempurna hasilnya saat meinputkan di baris bawah, keyboard muncul tidak muncul
+Namun saat dijalankan di browser/chrome bisa , ter run dg sempurna
+
+5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke spreadsheet yang telah disediakan!
 
 
 
