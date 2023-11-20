@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:master_plan/models/data_layer.dart';
 import 'package:master_plan/provider/plan_provider.dart';
+import 'package:master_plan/views/plan_creator_screen.dart';
 import './views/plan_screen.dart';
 
 void main() => runApp(MasterPlanApp());
@@ -11,14 +12,21 @@ class MasterPlanApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.purple),
+    return PlanProvider(
+      //theme: ThemeData(primarySwatch: Colors.purple),
       //home: PlanScreen(),
-      home: PlanProvider(
-        notifier: ValueNotifier<Plan>(const Plan()),
-        child: const PlanScreen(), 
+      //home: PlanProvider(
+      notifier: ValueNotifier<List<Plan>>(const []),
+      //child: const PlanScreen(),
+      child: MaterialApp(
+        title: 'State management App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
-      );
+        //home: const PlanScreen(),
+        home: const PlanCreatorScreen(),
+      ),
+    );
   }
 }
 

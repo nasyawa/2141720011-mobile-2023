@@ -6,9 +6,7 @@ class Plan {
 
   const Plan({this.name = '', this.tasks = const []});
 
-  int get completedCount => tasks
-    .where((task) => task.complete)
-    .length;
+  int get completedCount => tasks.where((task) => task.complete).length;
   String get completenessMessage =>
-    '$completedCount out of ${tasks.length} tasks';
+      '$completedCount out of ${tasks.length} tasks';
 }

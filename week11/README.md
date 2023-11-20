@@ -147,6 +147,61 @@ Namun saat dijalankan di browser/chrome bisa , ter run dg sempurna
 
 5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke spreadsheet yang telah disediakan!
 
+## **Praktikum 3: Membuat State di Multiple Screens**
 
+**Langkah 1: Edit PlanProvider**
+![Langkah 1 Prak 3](docs/3_Langkah1.jpg)
+**Langkah 2: Edit main.dart**
+![Langkah 2 Praka 3](docs/3_Langkah2.jpg)
+**Langkah 3: Edit plan_screen.dart**
+![Langkah 3 Prak 3](docs/3_Langkah3.jpg)
+**Langkah 4: Error**
+Terjadi error saat memanggil PlanProvider.of(context)karena screen saat ini hanya menerima atugas untuk 1 kel plan, tapi sekarang PlanProvider menjadi list dari objek plan tersebut.
 
+**Langkah 5: Tambah getter Plan**
+![Langkah 5 Prak 3](docs/3_Langkah5.jpg)
 
+**Langkah 6: Method initState()**
+
+=> Kode nya masih tetap
+
+**Langkah 7: Widget build**
+![Langkah 7 Prak 3](docs/3_Langkah7a.jpg)
+![Langkah 7](docs/3_Langkah7b.jpg)
+
+**Langkah 8: Edit _buildTaskTile**
+![Langkah 8 Prak 3](docs/3_Langkah8.jpg)
+
+**Langkah 9: Buat screen baru**
+![Langkah 9 Prak 3](docs/3_Langkah9a.jpg)
+![Langkah 9 Prak 3](docs/3_Langkah9b.jpg)
+
+**Langkah 10: Pindah ke class _PlanCreatorScreenState**
+![Langkah 10](docs/3_Langkah10.jpg)
+
+**Langkah 11: Pindah ke method build**
+![Langkah 11](docs/3_Langkah11.jpg)
+
+**Langkah 12: Buat widget _buildListCreator**
+![LAngkah 12](docs/3_Langkah12.jpg)
+
+**Langkah 13: Buat void addPlan()**
+![LAngkah 13](docs/3_Langkah13.jpg)
+**Langkah 14: Buat widget _buildMasterPlans()**
+![Langkah 14](docs/3_Langkah14.jpg)
+**Hasil**
+![Hasil](docs/Hasil.gif)
+
+## **Tugas Praktikum 3: State di Multiple Screens**
+
+2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+![Soal 2](docs/3_soal2.jpg)
+=> menunjukkan cara kerja aplikasi material di Flutter
+MaterialApp, komponen utama yang menyediakan tema dan gaya untuk aplikasi.
+PlanProvider, komponen yang menyediakan data rencana.
+PlanScreen, komponen yang menampilkan rencana.
+PlanCreatorScreen, komponen yang digunakan untuk membuat rencana baru.
+user membuka aplikasi material, user menekan tombol untuk membuat rencana baru
+PlanCreatorScreen akan menampilkan formulir untuk membuat rencana baru.
+user mengisi formulir dan menekan tombol untuk menyimpan rencana
+PlanCreatorScreen akan menyimpan rencana ke komponen PlanProvider.
