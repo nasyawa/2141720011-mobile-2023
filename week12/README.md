@@ -74,3 +74,21 @@ Jelaskan maksud kode langkah 1 dan 2 tersebut!
 - await, ditgunakan untuk menunggu nilai yg dikembalika oleh return, nanti niali tsbut ditambahkan ke var total
 - setState() untuk memperbarui state pd widget, mengubah nial variabel result jdi nilai dari total
 
+### Praktikum 3: Menggunakan Completer di Future
+
+- Menggunakan Future dengan then, catchError, async, dan await
+- Melakukan operasi async di Dart dan Flutter yaitu dengan class Completer.
+
+**Langkah 1: Buka main.dart**
+**Langkah 2: Tambahkan variabel dan method**
+**Langkah 3: Ganti isi kode onPressed()**
+**Langkah 4:**
+
+**Soal 5**
+Jelaskan maksud kode langkah 2 tersebut!
+=>
+**Langkah 5: Ganti method calculate()**
+**Langkah 6: Pindah ke onPressed()**
+
+**Soal 6**
+Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
