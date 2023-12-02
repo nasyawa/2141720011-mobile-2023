@@ -80,15 +80,32 @@ Jelaskan maksud kode langkah 1 dan 2 tersebut!
 - Melakukan operasi async di Dart dan Flutter yaitu dengan class Completer.
 
 **Langkah 1: Buka main.dart**
+![langkah 1](docs/3_Langkah1.jpg)
+
 **Langkah 2: Tambahkan variabel dan method**
+![Langkaha 2](docs/3_Langkah2.jpg)
+
 **Langkah 3: Ganti isi kode onPressed()**
+![LAngkah 3](docs/3_Langkah3.jpg)
+
 **Langkah 4:**
+![W12:Soal 5](docs/3_Langkah4Run.gif)
 
 **Soal 5**
 Jelaskan maksud kode langkah 2 tersebut!
 =>
+- terdapat obejk 'Completer', untuk menangani nilai yg akan dikembalikan di masa depan
+- metode calculate, fungsi yg bertugas untuk melakukan komputasi/proses tertentu yg menghasilkan nilai di masa depan
+- await Future.delayed(const Duration(seconds: 5)) digunakan untuk menunda eksekusi selama 5 detik setelah itu, completer.complete(42) dipanggil untuk menandai bahwa perhitungan telah selesai dengan hasil nilai 42. 
+
 **Langkah 5: Ganti method calculate()**
+![Langkah 5](docs/3_Langkah5.jpg)
+
 **Langkah 6: Pindah ke onPressed()**
+![Langkah 6](docs/3_Langkah6.jpg)
 
 **Soal 6**
 Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+- Di langkah 2, calculate() untuk menginisiasi completer nilai 42 dan ada delay 5 detik dg future.delayed
+- di langkah 5, penanganan error ditambahkan di dalam calculate
+- di langkah 6, .catchError() ditambahkan sebagai penanganan kesalahan jika terjadi error saat menunggu hasil dari getNumber()
