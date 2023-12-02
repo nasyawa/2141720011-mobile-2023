@@ -109,3 +109,28 @@ Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
 - Di langkah 2, calculate() untuk menginisiasi completer nilai 42 dan ada delay 5 detik dg future.delayed
 - di langkah 5, penanganan error ditambahkan di dalam calculate
 - di langkah 6, .catchError() ditambahkan sebagai penanganan kesalahan jika terjadi error saat menunggu hasil dari getNumber()
+
+### Praktikum 4: Memanggil Future secara paralel
+
+FutureGroup tersedia di package async, yang mana itu harus diimpor ke file dart Anda, seperti berikut.
+
+FutureGroup adalah sekumpulan dari Future yang dapat run secara paralel. Ketika run secara paralel, maka konsumsi waktu menjadi lebih hemat (cepat) dibanding run method async secara single setelah itu method async lainnya.
+
+**Langkah 1: Buka file main.dart**
+![Langkah 1](docs/4_Langkah1.jpg)
+
+**Langkah 2: Edit onPressed()**
+![Langkah 2](docs/4_Langkah2.jpg)
+
+**Langkah 3: Run  (W12:Soal7)** 
+![Run Langkah 3](docs/4_Langkah3.gif)
+
+**Soal 8**
+Jelaskan maksud perbedaan kode langkah 1 dan 4!
+=> pada langkah 1, penggunaan 'futuregroup' untuk mengelola sekelompok future dan memungkinkan penambahan future ke dalam grup secara dinamis
+padda langkah 4, Future.wait untuk menunggu beberapa future sekaligus yang diwakili oleh list dari future-future yang diberikan. 
+
+jadi kedua kode ini memberikan Pilihan antara menggunakan Future.wait langsung atau dengan bantuan FutureGroup.
+namun, Future.wait bisa menjadi pilihan yang lebih sederhana. 
+
+
