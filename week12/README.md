@@ -133,4 +133,34 @@ padda langkah 4, Future.wait untuk menunggu beberapa future sekaligus yang diwak
 jadi kedua kode ini memberikan Pilihan antara menggunakan Future.wait langsung atau dengan bantuan FutureGroup.
 namun, Future.wait bisa menjadi pilihan yang lebih sederhana. 
 
+### Praktikum 5: Menangani Respon Error pada Async Code
 
+Ada beberapa teknik untuk melakukan handle error pada code async
+yaitu then() callback dan pola async/await.
+
+**Langkah 1: Buka file main.dart**
+![Langkah 1](docs/5_Langkah1.jpg)
+
+**Langkah 2: ElevatedButton**
+![LAngkah 2](docs/5_Langkah2.jpg)
+
+**Langkah 3: Run  W12:Soal 9**
+![RunSoal9](docs/Soal9Run.gif)
+
+debug console akan melihat teks Complete
+![Debug consule](docs/Soal%209.jpg)
+
+**Langkah 4: Tambah method handleError()**
+![Langkah 4](docs/5_Langkah4.jpg)
+
+**Soal 10**
+
+Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? 
+![Soal 10](docs/5_Langkah4b.jpg)
+![Run](docs/Prak%205.gif)
+
+Jelaskan perbedaan kode langkah 1 dan 4!
+=> Perbedaan utama terletak pada penanganan dan reaksi terhadap kesalahan
+
+- Langkah 1 bertanggung jawab untuk membuat sebuah Future yang akan menghasilkan sebuah Exception setelah penundaan.
+- Langkah 4 berfokus pada penanganan error yang mungkin terjadi saat menunggu dan mengeksekusi returnError(), menggunakan blok try, catch, dan finally untuk mengelola dan menangani error yang terjadi.

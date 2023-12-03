@@ -107,6 +107,25 @@ class _FuturePageState extends State<FuturePage> {
     });
   }
 
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+
+  Future handleError() async {
+    try {
+      await returnError();
+    }
+    catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    }
+    finally {
+      print('Complete');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done by the _incrementCounter method above.
@@ -121,7 +140,18 @@ class _FuturePageState extends State<FuturePage> {
           ElevatedButton(
             child: const Text('GO!'),
             onPressed: () {
-              returnFG();
+              handleError();
+              // returnError()
+              // .then((value){
+              //   setState(() {
+              //     result = 'Success';
+              //   });
+              // }).catchError((onError){
+              //   setState(() {
+              //     result = onError.toString();
+              //   });
+              // }).whenComplete(() => print ('Complete'));
+              //returnFG();
               // getNumber().then((value) {
               //   setState(() {
               //     result = value.toString();
