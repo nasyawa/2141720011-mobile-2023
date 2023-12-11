@@ -164,3 +164,44 @@ Jelaskan perbedaan kode langkah 1 dan 4!
 
 - Langkah 1 bertanggung jawab untuk membuat sebuah Future yang akan menghasilkan sebuah Exception setelah penundaan.
 - Langkah 4 berfokus pada penanganan error yang mungkin terjadi saat menunggu dan mengeksekusi returnError(), menggunakan blok try, catch, dan finally untuk mengelola dan menangani error yang terjadi.
+
+### Praktikum 6: Menggunakan Future dengan StatefulWidget
+
+**Langkah 1: install plugin geolocator**
+![Langkah 1](docs/6_Langkah1.jpg)
+
+**Langkah 2: Tambah permission GPS**
+![LAngkah 2](docs/6_Langkah2.jpg)
+
+**Langkah 3: Buat file geolocation.dart**
+![Langkah 3](docs/6_Langkah3.jpg)
+
+**Langkah 4: Buat StatefulWidget**
+![:angkah 4](docs/6_Langkah4.jpg)
+
+**Langkah 5: Isi kode geolocation.dart**
+![LAngkah 5](docs/6_Langkah5b.jpg)
+
+**Soal 11**
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+![Soal 11](docs/Soal%2011.jpg)
+
+**Langkah 6: Edit main.dart**
+![](docs/6_Langkah6.jpg)
+**Langkah 7: Run**
+![](docs/6_Langkah7Run.gif)
+**Langkah 8: Tambahkan animasi loading**
+![](docs/6_Langkah8.jpg)
+**Setelah ditambah animasi**
+![](docs/6_Langkah8.gif)
+
+**Soal 12**
+Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+
+=>TERDAPAT LOADING 
+
+Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+=> di browser juga sama seprti di hp, ada konfirmasi izin menyalakan lokasi
+![](docs/6_Langkah8.jpg)
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 12".
