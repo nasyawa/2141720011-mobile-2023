@@ -227,3 +227,37 @@ kemudian, tidak ada konfirmasi izinkan lokasi seperti tadi
 ![](docs/7_Run2.gif)
 Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
 => tidak ada, mungkin karena kode saya tidak ada error, sehingga handle error tidak berjalan
+
+### Praktikum 8: Navigation route dengan Future Function
+
+**Langkah 1: Buat file baru navigation_first.dart**
+![](docs/8_Langkah1.jpg)
+
+**Langkah 2: Isi kode navigation_first.dart**
+
+**Soal 15**
+![](docs/8_Soal15.jpg)
+
+**Langkah 3: Tambah method di class _NavigationFirstState**
+![](docs/8_Langkah3.jpg)
+
+**Langkah 4: Buat file baru navigation_second.dart**
+![](docs/8_Langkah4.jpg)
+
+**Langkah 5: Buat class NavigationSecond dengan StatefulWidget**
+![](docs/8_Langkah5.jpg)
+
+**Langkah 6: Edit main.dart**
+![](docs/8_Langkah6.jpg)
+
+**Langkah 8: Run**
+![](docs/8_Run1.gif)
+
+**Soal 16**
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+=> saat kita tekan button change color, masuklah ke page navigation second disana terdapat bbrpa button color yg ketika ditekan juga ke halan color tersebut,
+
+- Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+=> saya menambahkan 3 warna baru
+![](docs/8_Soal16.jpg)
+![](docs/8_Run2.gif)
