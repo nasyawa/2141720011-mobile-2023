@@ -261,3 +261,26 @@ Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
 => saya menambahkan 3 warna baru
 ![](docs/8_Soal16.jpg)
 ![](docs/8_Run2.gif)
+
+### Praktikum 9: Memanfaatkan async/await dengan Widget Dialog
+
+**Langkah 1: Buat file baru navigation_dialog.dart**
+![](docs/9_Langkah1.jpg)
+**Langkah 2: Isi kode navigation_dialog.dart**
+![](docs/9_Langkah2.jpg)
+**Langkah 3: Tambah method async**
+![](docs/9_Langkah3.jpg)
+**Langkah 4: Panggil method di ElevatedButton**
+![](docs/9_Langkah4.jpg)
+**Langkah 5: Edit main.dart**
+![](docs/9_Langkah5.jpg)
+**Langkah 6: Run**
+![](docs/9_Run1.gif)
+**Soal 17**
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+=> berubah warnanya sesuai yg kita tekan, method showSolor di textbutton 
+- Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+kode yang sudah saya modif
+![](docs/9_Soal.gif.jpg)
+Hasil
+![](docs/9_Run2.gif)
