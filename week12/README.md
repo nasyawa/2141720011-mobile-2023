@@ -204,4 +204,26 @@ Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
 => di browser juga sama seprti di hp, ada konfirmasi izin menyalakan lokasi
 ![](docs/6_Langkah8.jpg)
 
-Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 12".
+### Praktikum 7: Manajemen Future dengan FutureBuilder
+
+**Langkah 1: Modifikasi method getPosition()**
+![](docs/7_Langkah1.jpg)
+**Langkah 2: Tambah variabel**
+![](docs/7_Langkah2.jpg)
+**Langkah 3: Tambah initState()**
+![](docs/7_Langkah3.jpg)
+**Langkah 4: Edit method build()**
+![](docs/7_Langkah4.jpg)
+
+**Soal 13**
+![](docs/7_Run1.gif)
+Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+=> perbedaa yang ada di outputku, ada diletak tulisan yang diawal awal tdi kurang rapi, sekrang letaknya rapi di tengah
+kemudian, tidak ada konfirmasi izinkan lokasi seperti tadi 
+
+**Langkah 5: Tambah handling error**
+![](docs/7_Langkah5.jpg)
+**Soal 14**
+![](docs/7_Run2.gif)
+Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+=> tidak ada, mungkin karena kode saya tidak ada error, sehingga handle error tidak berjalan
