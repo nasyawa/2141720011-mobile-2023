@@ -150,3 +150,24 @@ widget akan melakukan inisialisasi untuk mendengarkan perubahan pada aliran data
 - Dengan memanggil numberStream.addError(), fungsi tersebut kemungkinan akan mengirimkan suatu kesalahan (error) ke dalam aliran data yang terkait dengan numberStream
 **Run langkah 15**
 ![Run 2](docs/2_Run.gif)
+
+### Praktikum 3: Injeksi data ke streams
+
+**Langkah 1: Buka main.dart**
+![Langkah 1](docs/3_Langkah1.jpg)
+**Penjelasan kode Langkah 1 - W:13 Soal 8**
+-  membuat variabel transformer yang bertipe StreamTransformer
+- StreamTransformer disni kemungkinan untuk melakukan transformasi pada data yang mengalir dalam sebuah stream
+
+**Langkah 2: Tambahkan kode ini di initState**
+![Langkah 2](docs/3_Langkah2.jpg)
+**Penjelasan kode Langkah 2 - W:13 Soal 8**
+- handleError akan menangani situasi jika ada kesalahan (error) dalam stream. 
+Saat terjadi kesalahan, nilai -1 akan dikirimkan ke dalam stream melalui sink
+- handleDone digunakan untuk menangani situasi ketika proses streaming sudah selesai
+
+**Langkah 3: Tetap di initState**
+![Langkah 3](docs/3_Langkah3.jpg)
+**Penjelasan kode Langkah 3 - W:13 Soal 8**
+ transformasi pada data yang mengalir dalam stream menggunakan transformer, dan kemudian akan mendengarkan (listen) perubahan-perubahan pada data tersebut. Ketika ada perubahan, lastNumber akan diperbarui sesuai dengan event yang diterima. Jika terjadi kesalahan dalam stream, lastNumber akan diatur menjadi -1 untuk menandakan adanya kesalahan.
+
