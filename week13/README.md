@@ -33,7 +33,7 @@ menampilkan data JSON,
 **Langkah 5: Tambah method getColors()**
 ![Langkah 5](docs/1_Langkah5.jpg)
 
-**Langkah 6: Tambah perintah yield* .**
+**Langkah 6: Tambah perintah yield**
 ![Langkah 6](docs/1_Langkah6.jpg)
 **W13 : Soal 3**
 - Jelaskan fungsi keyword yield* pada kode tersebut!
@@ -85,4 +85,68 @@ namun,
 - await for menunggu dan mengambil nilai-nilai dari Stream satu per satu secara berurutan secara sinkron 
 - Metode .listen pada Stream memungkinkan kita untuk mendaftarkan callback yang akan dipanggil setiap kali ada nilai baru yang dihasilkan oleh Stream.
 
+### Praktikum 2: Stream controllers dan sinks
 
+StreamControllers akan membuat jembatan antara Stream dan Sink. Stream berisi data secara sekuensial yang dapat diterima oleh subscriber manapun, sedangkan Sink digunakan untuk mengisi (injeksi) data.
+
+**Langkah 1: Buka file stream.dart**
+![Langkah 1](docs/2_Langkah1.jpg)
+
+**Langkah 2: Tambah class NumberStream**
+![Langkah 2](docs/2_Langkah2.jpg)
+
+**Langkah 3: Tambah StreamController**
+![Langkah 3](docs/2_Langkah3.jpg)
+
+**Langkah 4: Tambah method addNumberToSink**
+![Langkah 4](docs/2_Langkah4.jpg)
+
+**Langkah 5: Tambah method close()**
+![Langkah 5](docs/2_Langkah5.jpg)
+
+**Langkah 6: Buka main.dart**
+![Langkah 6](docs/2_Langkah6.jpg)
+
+**Langkah 7: Tambah variabel**
+![Langkah 7](docs/2_Langkah7.jpg)
+
+**Langkah 8: Edit initState()**
+![Langkah 8](docs/2_Langkah8.jpg)
+
+**penjelasan kode W:13-Soal 6**
+=> Kode di langkah 6 ini,
+widget akan melakukan inisialisasi untuk mendengarkan perubahan pada aliran data yang dihasilkan oleh numberStreamController. Ketika ada perubahan pada aliran data tersebut, nilai dari lastNumber akan diperbarui dan tampilan widget yang menggunakan nilai tersebut akan di-update melalui pemanggilan setState().
+- Inisialisasi objek numberStream dari kelas NumberStream
+- Menginisialisasi numberStreamController dengan menggunakan controller dari numberStream
+
+**Langkah 9: Edit dispose()**
+![Langkah 9](docs/2_Langkah9.jpg)
+
+**Langkah 10: Tambah method addRandomNumber()**
+**penjelasan kode W:13-Soal 6**
+=> Kode ini untuk menambahkan bilangan acak ke dalam aliran data (stream).
+- Membuat objek random dari kelas Random yang akan digunakan untuk menghasilkan bilangan acak.
+-  memanggil fungsi nextInt(10) untuk menghasilkan bilangan bulat acak dari 0 hingga 9 (karena parameter yang diberikan adalah 10).
+
+**Langkah 11: Edit method build()**
+![Langkah 11](docs/2_Langkah11.jpg)
+
+**Langkah 12: Run**
+![Run](docs/2_Langkah12.gif)
+
+**Langkah 13: Buka stream.dart**
+![Langkah 13](docs/2_Langkah13.jpg)
+**penjelasan kode langkah 13 - W13: soal 7**
+- untuk menambahkan kesalahan (error)
+
+**Langkah 14: Buka main.dart**
+![Langkah 14](docs/2_Langkah13.jpg)
+**penjelasan kode langkah 13 - W13: soal 7**
+- jika terjadi kesalahan (error) dalam stream, lastNumber akan diatur menjadi -1 untuk menandakan terjadinya kesalahan tersebut.
+
+**Langkah 15: Edit method addRandomNumber()**
+![Langkah 15](docs/2_Langkah15.jpg)
+**penjelasan kode langkah 13 - W13: soal 7**
+- Dengan memanggil numberStream.addError(), fungsi tersebut kemungkinan akan mengirimkan suatu kesalahan (error) ke dalam aliran data yang terkait dengan numberStream
+**Run langkah 15**
+![Run 2](docs/2_Run.gif)
